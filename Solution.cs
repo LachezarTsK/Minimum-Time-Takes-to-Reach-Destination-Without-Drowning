@@ -28,11 +28,11 @@ public class Solution
         rows = land.Count;
         columns = land[0].Count;
         this.land = land;
-        initializeMatrixMinTimeToFlood();
-        return findMinTimeToReachDestination();
+        InitializeMatrixMinTimeToFlood();
+        return FindMinTimeToReachDestination();
     }
 
-    private int findMinTimeToReachDestination()
+    private int FindMinTimeToReachDestination()
     {
         Queue<Point> queueForDestinationTime = new Queue<Point>();
         InitializeQueueForDestinationTime(queueForDestinationTime);
@@ -66,7 +66,7 @@ public class Solution
         return IMPOSSIBLE_TO_REACH_DESTINATION;
     }
 
-    private void initializeMatrixMinTimeToFlood()
+    private void InitializeMatrixMinTimeToFlood()
     {
         minTimeToFlood = new int[rows][];
         for (int r = 0; r < rows; ++r)
